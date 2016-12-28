@@ -236,7 +236,7 @@ div.clear {
   width: 100%;
 }
 .list_table th, .submissions_table th {
-  background-image: url(../images/list_table_heading.jpg); 
+  background-image: url(../images/list_table_heading.jpg);
   color: white;
   height: 18px;
   text-align: center;
@@ -261,7 +261,7 @@ div.clear {
   height: 20px;
 }
 .list_table tr th table tr td {
-  background-image: url(../images/list_table_heading.jpg); 
+  background-image: url(../images/list_table_heading.jpg);
 }
 .submissions_table tr {
   height: 20px;
@@ -465,4 +465,10 @@ table.subpanel td {
 .previous_page_icon {
   float:right;
   margin-top: 5px;
+}
+#account_section a.update_link {
+  color: #ffffcc;
+}
+#account_section a.update_link:hover {
+  color: orange;
 }

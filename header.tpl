@@ -54,7 +54,13 @@
 	      <tr>
 	        <td><img src="{$theme_url}/images/account_section_left.jpg" border="0" /></td>
 	        <td id="account_section">
-	          <b>v{$settings.program_version}</b>
+            {if $settings.release_type == "beta"}
+              <b>{$settings.program_version}-beta-{$settings.release_date}</b>
+            {else}
+              <b>{$settings.program_version}</b>
+            {/if}
+            |
+            <a href="#" onclick="return ft.check_updates()" class="update_link">{$LANG.word_update}</a>
 	        </td>
 	        <td><img src="{$theme_url}/images/account_section_right.jpg" border="0" /></td>
 	      </tr>
