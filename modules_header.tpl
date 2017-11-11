@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html dir="{$LANG.special_text_direction}">
 <head>
   <title>{$head_title}</title>
@@ -24,6 +24,9 @@
   <script src="{$theme_url}/scripts/jquery-ui-1.8.6.custom.min.js"></script>
   <script src="{$g_root_url}/global/scripts/general.js?v=2_1_0"></script>
   <script src="{$g_root_url}/global/scripts/rsv.js?v=2_1_0"></script>
+  {css_files files=$css_files module_folder=$module_folder root_url=$g_root_url}
+  {js_files files=$js_files module_folder=$module_folder root_url=$g_root_url}
+
   {$head_string}
   {$head_js}
   {$head_css}
@@ -34,7 +37,7 @@
 <div id="container">
 
   <div id="header">
-    {if $SESSION.account.is_logged_in && !$g_omit_top_bar}
+    {if $is_logged_in && !$hide_header_bar}
       <div style="position:absolute; top: 0px; right: 0px;">
         <table cellspacing="0" cellpadding="0" height="25">
         <tr>
@@ -47,7 +50,7 @@
             {else}
               <b>{$settings.program_version}</b>
             {/if}
-            {if $SESSION.account.account_type == "admin"}
+            {if $account.account_type == "admin"}
               |
               <a href="#" onclick="return ft.check_updates()" class="update_link">{$LANG.word_update}</a>
             {/if}
@@ -58,11 +61,13 @@
       </div>
     {/if}
 
-    <span style="float: left">
-    {if $settings.logo_link}<a href="{$settings.logo_link}">{/if}<img src="{$theme_url}/images/logo.jpg" border="0" width="791" height="87" />{if $settings.logo_link}</a>{/if}
+    <span style="float: left; height: 87px">
+    {if isset($settings.logo_link) && !empty($settings.logo_link)}<a href="{$settings.logo_link}">{/if}
+      <img src="{$theme_url}/images/logo.jpg" border="0" width="791" height="87" />
+      {if isset($settings.logo_link) && !empty($settings.logo_link)}</a>{/if}
     </span>
 
-		<div class="clear"> </div>
+    <div class="clear"> </div>
   </div>
 
   <div id="content">
@@ -71,6 +76,8 @@
     <tr>
       <td width="180" valign="top">
         <div id="left_nav">
+
+          {if !$hide_nav_menu}
           <div class="nav_heading">{$LANG.phrase_module_nav}</div>
           <div id="module_nav">
             {ft_include file="module_menu.tpl"}
@@ -84,6 +91,7 @@
           <div id="main_nav">
             {ft_include file="menu.tpl"}
           </div>
+          {/if}
         </div>
       </td>
       <td valign="top">

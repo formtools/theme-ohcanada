@@ -12,8 +12,8 @@
  */
 
 $theme_name = "Oh Canada";
-$theme_author = "Encore Web Studios";
-$theme_author_email = "formtools@encorewebstudios.com";
-$theme_link = "http://themes.formtools.org/ohcanada/";
+$theme_author = "Ben Keen";
+$theme_author_email = "ben.keen@gmail.com";
+$theme_link = "https://themes.formtools.org";
 $theme_description = "A red and white theme with a side-helping of maple syrup and moose.";
-$theme_version = "1.1.0";
+$theme_version = "2.0.0";

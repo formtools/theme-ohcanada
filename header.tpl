@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html dir="{$LANG.special_text_direction}">
 <head>
   <title>{$head_title}</title>
@@ -35,7 +35,7 @@
 <div id="container">
 
   <div id="header">
-    {if $SESSION.account.is_logged_in && !$g_omit_top_bar}
+    {if $is_logged_in}
       <div style="position:absolute; top: 0px; right: 0px;">
         <table cellspacing="0" cellpadding="0" height="25">
         <tr>
@@ -48,7 +48,7 @@
             {else}
               <b>{$settings.program_version}</b>
             {/if}
-            {if $SESSION.account.account_type == "admin"}
+            {if $account.account_type == "admin"}
               |
               <a href="#" onclick="return ft.check_updates()" class="update_link">{$LANG.word_update}</a>
             {/if}
@@ -59,11 +59,13 @@
       </div>
     {/if}
 
-    <span style="float: left">
-    {if $settings.logo_link}<a href="{$settings.logo_link}">{/if}<img src="{$theme_url}/images/logo.jpg" border="0" width="791" height="87" />{if $settings.logo_link}</a>{/if}
+    <span style="float: left; height: 87px">
+    {if isset($settings.logo_link) && !empty($settings.logo_link)}<a href="{$settings.logo_link}">{/if}
+      <img src="{$theme_url}/images/logo.jpg" border="0" width="791" height="87" />
+    {if isset($settings.logo_link) && !empty($settings.logo_link)}</a>{/if}
     </span>
 
-		<div class="clear"> </div>
+    <div class="clear"> </div>
   </div>
 
   <div id="content">
