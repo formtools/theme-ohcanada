@@ -35,7 +35,7 @@
 <div id="container">
 
   <div id="header">
-    {if $is_logged_in}
+    {if $is_logged_in && isset($settings.program_version)}
       <div style="position:absolute; top: 0px; right: 0px;">
         <table cellspacing="0" cellpadding="0" height="25">
         <tr>
