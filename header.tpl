@@ -17,13 +17,13 @@
   //]]>
   </script>
 
-  <link type="text/css" rel="stylesheet" href="{$g_root_url}/global/css/main.css?v=2_1_0">
-  <link type="text/css" rel="stylesheet" href="{$theme_url}/css/styles.css?v=2_1_0">
+  <link type="text/css" rel="stylesheet" href="{$g_root_url}/global/css/main.css?v=3_0_0">
+  <link type="text/css" rel="stylesheet" href="{$theme_url}/css/styles.css?v=3_0_0">
   <link href="{$theme_url}/css/smoothness/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css"/>
   <script src="{$g_root_url}/global/scripts/jquery.js"></script>
   <script src="{$theme_url}/scripts/jquery-ui-1.8.6.custom.min.js"></script>
-  <script src="{$g_root_url}/global/scripts/general.js?v=2_1_0"></script>
-  <script src="{$g_root_url}/global/scripts/rsv.js?v=2_1_0"></script>
+  <script src="{$g_root_url}/global/scripts/general.js?v=3_0_0"></script>
+  <script src="{$g_root_url}/global/scripts/rsv.js?v=3_0_0"></script>
   {$head_string}
   {$head_js}
   {$head_css}
