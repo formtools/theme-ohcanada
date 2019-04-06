@@ -16,5 +16,5 @@ $theme_author = "Ben Keen";
 $theme_author_email = "ben.keen@gmail.com";
 $theme_link = "https://themes.formtools.org";
 $theme_description = "A red and white theme with a side-helping of maple syrup and moose.";
-$theme_version = "2.0.2";
+$theme_version = "2.0.3";
 
